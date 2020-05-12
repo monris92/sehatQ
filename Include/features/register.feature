@@ -11,5 +11,5 @@ Then sistem direct url sehatq.com as user registered <userName>
 
 	Examples:
 		|	userName	|					emailName							|password|
-		|ahmad faris|farisjr558+sehatQaa1test@gmail.com|123456	|
+		|ahmad faris|farisjr558+sehatQu@gmail.com|123456	|
 	
