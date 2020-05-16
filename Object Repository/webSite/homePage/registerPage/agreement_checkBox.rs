@@ -6,12 +6,12 @@
    <elementGuidId>9a39fd38-91a2-487e-aa8b-3071febe05d4</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;formRegister&quot;]/div[5]/div/label</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//*[@name = 'agreement' and @id = 'register_agreement' and @type = 'checkbox']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;formRegister&quot;]/div[5]/div/label</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

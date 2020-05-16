@@ -1,0 +1,156 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=26360, tid=0x0000000000000634
+#
+# JRE version:  (8.0_181-b13) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.181-b13 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000031ad800):  JavaThread "Unknown thread" [_thread_in_vm, id=1588, stack(0x0000000003270000,0x0000000003370000)]
+
+Stack: [0x0000000003270000,0x0000000003370000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000031ad800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=1588, stack(0x0000000003270000,0x0000000003370000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 36352K, used 624K [0x00000000d7b80000, 0x00000000da400000, 0x0000000100000000)
+  eden space 31232K, 2% used [0x00000000d7b80000,0x00000000d7c1c298,0x00000000d9a00000)
+  from space 5120K, 0% used [0x00000000d9f00000,0x00000000d9f00000,0x00000000da400000)
+  to   space 5120K, 0% used [0x00000000d9a00000,0x00000000d9a00000,0x00000000d9f00000)
+ ParOldGen       total 83456K, used 0K [0x0000000087200000, 0x000000008c380000, 0x00000000d7b80000)
+  object space 83456K, 0% used [0x0000000087200000,0x0000000087200000,0x000000008c380000)
+ Metaspace       used 779K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 76K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000012830000,0x0000000012c00000] byte_map_base: 0x00000000123f7000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000075d72d00
+ Begin Bits: [0x0000000013690000, 0x00000000154c8000)
+ End Bits:   [0x00000000154c8000, 0x0000000017300000)
+
+Polling page: 0x00000000018e0000
+
+CodeCache: size=245760Kb used=327Kb max_used=327Kb free=245432Kb
+ bounds [0x0000000003470000, 0x00000000036e0000, 0x0000000012470000]
+ total_blobs=57 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.037 loading class java/lang/Short
+Event: 0.038 loading class java/lang/Short done
+Event: 0.038 loading class java/lang/Integer
+Event: 0.038 loading class java/lang/Integer done
+Event: 0.038 loading class java/lang/Long
+Event: 0.038 loading class java/lang/Long done
+Event: 0.039 loading class java/lang/NullPointerException
+Event: 0.039 loading class java/lang/NullPointerException done
+Event: 0.039 loading class java/lang/ArithmeticException
+Event: 0.039 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff6f0900000 - 0x00007ff6f0937000 	D:\katalon apps\Katalon_Studio_Windows_64-7.2.1\Katalon_Studio_Windows_64-7.2.1\jre\bin\java.exe
+0x00007fff55260000 - 0x00007fff55450000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fff546e0000 - 0x00007fff54792000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fff52430000 - 0x00007fff526d3000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fff547a0000 - 0x00007fff54843000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fff53a70000 - 0x00007fff53b0e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fff53df0000 - 0x00007fff53e87000 	C:\WINDOWS\System32\sechost.dll
+0x00007fff537f0000 - 0x00007fff53910000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fff53c50000 - 0x00007fff53de4000 	C:\WINDOWS\System32\USER32.dll
+0x00007fff531e0000 - 0x00007fff53201000 	C:\WINDOWS\System32\win32u.dll
+0x00007fff548e0000 - 0x00007fff54906000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fff527f0000 - 0x00007fff52984000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fff52340000 - 0x00007fff523de000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fff53210000 - 0x00007fff5330a000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fff42300000 - 0x00007fff42585000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.778_none_e6c6b761130d4fb8\COMCTL32.dll
+0x00007fff54010000 - 0x00007fff54346000 	C:\WINDOWS\System32\combase.dll
+0x00007fff53160000 - 0x00007fff531e0000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007fff53e90000 - 0x00007fff53ebe000 	C:\WINDOWS\System32\IMM32.DLL
+0x00000000746e0000 - 0x00000000747b2000 	D:\katalon apps\Katalon_Studio_Windows_64-7.2.1\Katalon_Studio_Windows_64-7.2.1\jre\bin\msvcr100.dll
+0x0000000075550000 - 0x0000000075df2000 	D:\katalon apps\Katalon_Studio_Windows_64-7.2.1\Katalon_Studio_Windows_64-7.2.1\jre\bin\server\jvm.dll
+0x00007fff54910000 - 0x00007fff54918000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007fff4fce0000 - 0x00007fff4fd04000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fff45aa0000 - 0x00007fff45aa9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007fff49290000 - 0x00007fff4929a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fff54850000 - 0x00007fff548bf000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fff4fcb0000 - 0x00007fff4fcdd000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007fff523e0000 - 0x00007fff5242a000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x0000000075540000 - 0x000000007554f000 	D:\katalon apps\Katalon_Studio_Windows_64-7.2.1\Katalon_Studio_Windows_64-7.2.1\jre\bin\verify.dll
+0x0000000075510000 - 0x0000000075539000 	D:\katalon apps\Katalon_Studio_Windows_64-7.2.1\Katalon_Studio_Windows_64-7.2.1\jre\bin\java.dll
+0x00000000752f0000 - 0x0000000075306000 	D:\katalon apps\Katalon_Studio_Windows_64-7.2.1\Katalon_Studio_Windows_64-7.2.1\jre\bin\zip.dll
+
+VM Arguments:
+java_command: <unknown>
+java_class_path (initial): .
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:\katalon apps\Katalon_Studio_Windows_64-7.2.1\Katalon_Studio_Windows_64-7.2.1\jre
+PATH=D:/katalon apps/Katalon_Studio_Windows_64-7.2.1/Katalon_Studio_Windows_64-7.2.1/jre/bin/server;D:/katalon apps/Katalon_Studio_Windows_64-7.2.1/Katalon_Studio_Windows_64-7.2.1/jre/bin;D:/katalon apps/Katalon_Studio_Windows_64-7.2.1/Katalon_Studio_Windows_64-7.2.1/jre/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-12.0.2\bin;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\faris\.windows-build-tools\python27\;C:\Users\faris\AppData\Local\Microsoft\WindowsApps;C:\Users\faris\AppData\Roaming\npm;C:\Users\faris\AppData\Local\GitHubDesktop\bin;C:\Users\faris\AppData\Local\Programs\Microsoft VS Code\bin;D:\katalon apps\Katalon_Studio_Windows_64-7.2.1\Katalon_Studio_Windows_64-7.2.1;:D:\katalon apps\Katalon_Studio_Windows_64-7.2.1\Katalon_Studio_Windows_64-7.2.1\jre\bin
+USERNAME=faris
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 17 Stepping 0, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 18362 (10.0.18362.778)
+
+CPU:total 8 (initial active 8) (8 cores per cpu, 1 threads per core) family 23 model 17 stepping 0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv, bmi1
+
+Memory: 4k page, physical 7920208k(661264k free), swap 20695756k(4684k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.181-b13) for windows-amd64 JRE (1.8.0_181-b13), built on Jul  7 2018 04:01:33 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Wed May 13 04:53:33 2020
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

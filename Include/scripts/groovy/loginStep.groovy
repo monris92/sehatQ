@@ -51,16 +51,16 @@ class loginStep {
 	}
 	@When("user input emailLogin name (.*)")
 	def userInputEmailName(String emailName){
-		WebUI.setText(findTestObject('homePage/loginPage/inputEmail_loginPage'), emailName)
+		WebUI.setText(findTestObject('webSite/homePage/loginPage/inputEmail_loginPage'), emailName)
 	}
 	@And("user input passwordLogin (.*)")
 	def userInputPassword(String password){
-		WebUI.setText(findTestObject('homePage/loginPage/inputPassword_loginPage'), password)
+		WebUI.setText(findTestObject('webSite/homePage/loginPage/inputPassword_loginPage'), password)
 	}
 
 	@And("user click continue btnLogin")
 	def continueBtn(){
-		WebUI.click(findTestObject('homePage/loginPage/btn_continueLogin'), FailureHandling.STOP_ON_FAILURE)
+		WebUI.click(findTestObject('webSite/homePage/loginPage/btn_continueLogin'), FailureHandling.STOP_ON_FAILURE)
 	}
 	@Then("sistem show pop up with text Login Berhasil")
 	def succesLogin(){

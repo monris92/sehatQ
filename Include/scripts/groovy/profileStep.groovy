@@ -51,18 +51,18 @@ class profileStep {
 	}
 	@Then("system show feature keluarga is present and ClickAble")
 	def keluargaLinkPresent(){
-		WebUI.verifyElementPresent(findTestObject('profilPage/featureKeluarga'), 0)
+		WebUI.verifyElementPresent(findTestObject('webSite/profilPage/featureKeluarga'), 0)
 	}
 	@And("system show feature aktivitas is present and ClickAble")
 	def aktivitasLinkPresent(){
-		WebUI.verifyElementPresent(findTestObject('profilPage/featureAktivitas'), 0)
+		WebUI.verifyElementPresent(findTestObject('webSite/profilPage/featureAktivitas'), 0)
 	}
 	@And("system show feature kalender is present and ClickAble")
 	def kalenderLinkPresent(){
-		WebUI.verifyElementPresent(findTestObject('profilPage/featureKalender'), 0)
+		WebUI.verifyElementPresent(findTestObject('webSite/profilPage/featureKalender'), 0)
 	}
 	@And("system show feature healt record is present and ClickAble")
 	def healtRecordLinkPresent(){
-		WebUI.verifyElementPresent(findTestObject('profilPage/featureHealthRecord'), 0)
+		WebUI.verifyElementPresent(findTestObject('webSite/profilPage/featureHealthRecord'), 0)
 	}
 }

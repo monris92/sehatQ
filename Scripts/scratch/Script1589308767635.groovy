@@ -17,6 +17,10 @@ import internal.GlobalVariable as GlobalVariable
 
 Mobile.startApplication('C:\\Users\\faris\\Downloads\\sehatQ1.0.24.apk', false)
 
+not_run: Mobile.verifyElementNotVisible(findTestObject('android/layerLoading'), 30)
+
+Mobile.delay(15, FailureHandling.STOP_ON_FAILURE)
+
 Mobile.tap(findTestObject('android/Login/btn_iconLogin'), 0)
 
 Mobile.tap(findTestObject('android/Login/login_Continue with email'), 0)

@@ -51,24 +51,24 @@ class registerStep {
 	}
 	@When("user input userRegister name (.*)")
 	def userInputName(String userName){
-		WebUI.setText(findTestObject('homePage/registerPage/inputName_registerPage'), userName)
+		WebUI.setText(findTestObject('webSite/homePage/registerPage/inputName_registerPage'), userName)
 	}
 	@And("user input emailRegister name (.*)")
 	def userInputEmailName(String emailName){
-		WebUI.setText(findTestObject('homePage/registerPage/inputEmail_registerPage'), emailName)
+		WebUI.setText(findTestObject('webSite/homePage/registerPage/inputEmail_registerPage'), emailName)
 	}
 	@And("user input passwordRegister (.*)")
 	def userInputPassword(String password){
-		WebUI.setText(findTestObject('homePage/registerPage/inputPassword_registerPage'), password)
+		WebUI.setText(findTestObject('webSite/homePage/registerPage/inputPassword_registerPage'), password)
 	}
 	@And("user click checkBox register agreement")
 	def checkBox(){
-		WebUI.check(findTestObject('homePage/registerPage/agreement_checkBox'))
+		WebUI.check(findTestObject('webSite/homePage/registerPage/agreement_checkBox'))
 	}
 
 	@And("user click continue btnRegister")
 	def continueBtn(){
-		WebUI.click(findTestObject('homePage/registerPage/btn_continueRegister'), FailureHandling.STOP_ON_FAILURE)
+		WebUI.click(findTestObject('webSite/homePage/registerPage/btn_continueRegister'), FailureHandling.STOP_ON_FAILURE)
 	}
 	@Then("sistem direct url sehatq.com as user registered (.*)")
 	def profilNameVerify(String userName){
