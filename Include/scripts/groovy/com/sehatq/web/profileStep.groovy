@@ -1,3 +1,4 @@
+package com.sehatq.web
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -43,27 +44,26 @@ import cucumber.api.java.en.When
 
 
 
-class loginStep {
-	@Given("user navigates to login page")
-	def navigateToLoginPage(){
-		WebUI.openBrowser('https://www.sehatq.com/login/email')
-		WebUI.maximizeWindow(FailureHandling.STOP_ON_FAILURE)
+class profileStep {
+	@And("user navigate url to profil page")
+	def	navigateUrlProfil(){
+		WebUI.waitForPageLoad(20)
+		WebUI.navigateToUrl('https://www.sehatq.com/profil')
 	}
-	@When("user input emailLogin name (.*)")
-	def userInputEmailName(String emailName){
-		WebUI.setText(findTestObject('webSite/homePage/loginPage/inputEmail_loginPage'), emailName)
+	@Then("system show feature keluarga is present and ClickAble")
+	def keluargaLinkPresent(){
+		WebUI.verifyElementPresent(findTestObject('webSite/profilPage/featureKeluarga'), 0)
 	}
-	@And("user input passwordLogin (.*)")
-	def userInputPassword(String password){
-		WebUI.setText(findTestObject('webSite/homePage/loginPage/inputPassword_loginPage'), password)
+	@And("system show feature aktivitas is present and ClickAble")
+	def aktivitasLinkPresent(){
+		WebUI.verifyElementPresent(findTestObject('webSite/profilPage/featureAktivitas'), 0)
 	}
-
-	@And("user click continue btnLogin")
-	def continueBtn(){
-		WebUI.click(findTestObject('webSite/homePage/loginPage/btn_continueLogin'), FailureHandling.STOP_ON_FAILURE)
+	@And("system show feature kalender is present and ClickAble")
+	def kalenderLinkPresent(){
+		WebUI.verifyElementPresent(findTestObject('webSite/profilPage/featureKalender'), 0)
 	}
-	@Then("sistem show pop up with text Login Berhasil")
-	def succesLogin(){
-		WebUI.verifyTextPresent('Login berhasil', false)
+	@And("system show feature healt record is present and ClickAble")
+	def healtRecordLinkPresent(){
+		WebUI.verifyElementPresent(findTestObject('webSite/profilPage/featureHealthRecord'), 0)
 	}
 }

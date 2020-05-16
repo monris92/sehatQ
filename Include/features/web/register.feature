@@ -1,4 +1,4 @@
-Feature: register Feature
+Feature: register Feature webSite
 
 Scenario Outline: Test Register with valid Email
 Given user navigates to register page

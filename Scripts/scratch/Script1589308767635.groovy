@@ -15,9 +15,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-Mobile.startApplication('C:\\Users\\faris\\Downloads\\sehatQ1.0.24.apk', false)
+not_run: Mobile.startApplication('C:\\Users\\faris\\Downloads\\sehatQ1.0.24.apk', false)
 
-not_run: Mobile.verifyElementNotVisible(findTestObject('android/layerLoading'), 30)
+Mobile.startExistingApplication('com.she.sehatq', FailureHandling.STOP_ON_FAILURE)
 
 Mobile.delay(15, FailureHandling.STOP_ON_FAILURE)
 

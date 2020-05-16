@@ -1,4 +1,4 @@
-Feature: login Feature
+Feature: login Feature webSite
 
 Scenario Outline: Test login with valid Email
 Given user navigates to login page

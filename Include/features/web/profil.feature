@@ -1,6 +1,6 @@
-Feature: profil Feature
-
+Feature: profil Feature webSite
 Scenario Outline: verify feature is exist at profil page
+
 Given user navigates to login page
 And user input emailLogin name <emailName>
 And user input passwordLogin <password>
@@ -12,4 +12,4 @@ And system show feature kalender is present and ClickAble
 And system show feature healt record is present and ClickAble
 Examples:
 		|					emailName									|password|
-		|farisjr558+sehatQaa1test@gmail.com	|123456	|
+		|farisjr558+@gmail.com							|123456	|
