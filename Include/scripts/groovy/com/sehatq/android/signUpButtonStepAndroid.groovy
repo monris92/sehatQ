@@ -44,48 +44,38 @@ import cucumber.api.java.en.When
 
 
 
-class registerStepAndroid {
+class signUpButtonStepAndroid {
 	/**
 	 * The step definitions below match with Katalon sample Gherkin steps
 	 */
-	@Given("user is on sign up Page")
-	def verifySignUpPage() {
-		Mobile.verifyElementText(findTestObject('android/Login/signUp/textSignUpAndroid'), 'Sign up', FailureHandling.STOP_ON_FAILURE)
+	@Given("user already open sehatQ app")
+	def userHasInstallAppsAlready() {
+		Mobile.startExistingApplication('com.she.sehatq', FailureHandling.STOP_ON_FAILURE)
 	}
 
-	@When("user input name (.*) field")
-	def userInpurNameRegister(String nameRegister) {
-		Mobile.setText(findTestObject('android/Login/signUp/input_nameSignUp'), nameRegister, 0)
+	@And("user is on homepage sehatQ android")
+	def systemShowHomePage() {
+		Mobile.delay(15, FailureHandling.STOP_ON_FAILURE)
 	}
 
-	@And("user input email (.*) field")
-	def userInpurEmailRegister(String emailRegister) {
-		Mobile.setText(findTestObject('android/Login/signUp/input_emailSignUp'), emailRegister, 0)
+	@When("user tap icon Login")
+	def userTapIconLogin() {
+		Mobile.tap(findTestObject('android/Login/btn_iconLogin'), 0)
 	}
-
-	@And("user input password (.*) field")
-	def userInpurpasswordRegister(String passwordRegister) {
-		Mobile.setText(findTestObject('android/Login/signUp/input_passwordSignUp'), passwordRegister, 0)
+	@And("user tap 'continue with email'")
+	def userTapContinue(){
+		Mobile.tap(findTestObject('android/Login/login_Continue with email'), 0)
 	}
-	@And("user check privacy policy checkBox")
-	def userChekTermConditionSignUp(){
-		Mobile.checkElement(findTestObject('android/Login/signUp/CheckBox_TermConditionsSignUp'), 0)
+	@Then("system show login Page")
+	def verifyLoginPage(){
+		Mobile.verifyElementText(findTestObject('android/Login/loginText'), 'Login')
 	}
-	@And("user tap button Lanjutkan")
-	def tapBtnlanjutkan(){
-		Mobile.tap(findTestObject('android/Login/signUp/btn_lanjutkan'), 0)
+	@And("System show 'belum terdaftar? sign up disini'")
+	def verifyBtnSignUp(){
+		Mobile.verifyElementVisible(findTestObject('android/Login/btnSignUp'), 0, FailureHandling.CONTINUE_ON_FAILURE)
 	}
-	@Then("system direct open onboarding profil Page")
-	def directOnboardingPage(){
-		Mobile.verifyElementText(findTestObject('android/Login/signUp/onBoard_profilPage/textOnboardingProfil_Lengkapi Profil'),
-			'Lengkapi Profil')
-	}
-	@And("user tap 'skip' button")
-	def skipOnboardingPage(){
-		Mobile.tap(findTestObject('android/Login/signUp/onBoard_profilPage/btnSkip_signUp'), 0)
-	}
-	@And("user tap 'ya' option allert for completed register")
-	def confirmSkipOnboardingPage(){
-		Mobile.tap(findTestObject('android/Login/signUp/onBoard_profilPage/skipAllertProfil_Ya'), 0)
+	@And("user Tap button 'belum terdaftar? sign up disini'")
+	def tapBtnSignUp(){
+		Mobile.tap(findTestObject('android/Login/btnSignUp'), 0)
 	}
 }

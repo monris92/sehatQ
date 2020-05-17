@@ -25,3 +25,24 @@ Mobile.tap(findTestObject('android/Login/btn_iconLogin'), 0)
 
 Mobile.tap(findTestObject('android/Login/login_Continue with email'), 0)
 
+Mobile.verifyElementText(findTestObject('android/Login/loginText'), 'Login')
+
+Mobile.verifyElementVisible(findTestObject('android/Login/btnSignUp'), 0, FailureHandling.CONTINUE_ON_FAILURE)
+
+Mobile.tap(findTestObject('android/Login/btnSignUp'), 0)
+
+Mobile.verifyElementText(findTestObject('android/Login/signUp/textSignUpAndroid'), 'Sign up', FailureHandling.STOP_ON_FAILURE)
+
+Mobile.setText(findTestObject('android/Login/signUp/CheckBox_TermConditionsSignUp'), '', 0)
+
+Mobile.checkElement(findTestObject('android/Login/signUp/CheckBox_TermConditionsSignUp'), 0)
+
+Mobile.tap(findTestObject('android/Login/signUp/btn_lanjutkan'), 0)
+
+Mobile.verifyElementText(findTestObject('android/Login/signUp/onBoard_profilPage/textOnboardingProfil_Lengkapi Profil'), 
+    'Lengkapi Profil')
+
+Mobile.tap(findTestObject('android/Login/signUp/onBoard_profilPage/btnSkip_signUp'), 0)
+
+Mobile.tap(findTestObject('android/Login/signUp/onBoard_profilPage/skipAllertProfil_Ya'), 0)
+
