@@ -1,7 +1,7 @@
 Feature: register for as new user, with email register
 
  
-Background: Test login with valid Email
+Background: user can go to login Page
     Given user already open sehatQ app 
     And user is on homepage sehatQ android
     When user tap icon Login
@@ -24,7 +24,7 @@ Background: Test login with valid Email
 
 	Examples:
 		|nameRegister	|emailRegister												|passwordRegister|
-		|ahmad faris	|farisjr558+sehatQandroid1@gmail.com		|123456	|
+		|ahmad faris	|farisjr558+sehatQ3@gmail.com		|123456	|
 		
 		
 		

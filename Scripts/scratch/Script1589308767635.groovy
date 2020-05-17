@@ -19,30 +19,40 @@ not_run: Mobile.startApplication('C:\\Users\\faris\\Downloads\\sehatQ1.0.24.apk'
 
 Mobile.startExistingApplication('com.she.sehatq', FailureHandling.STOP_ON_FAILURE)
 
-Mobile.delay(15, FailureHandling.STOP_ON_FAILURE)
+not_run: Mobile.delay(15, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('android/Login/btn_iconLogin'), 0)
+not_run: Mobile.tap(findTestObject('android/Login/btn_iconLogin'), 0)
 
-Mobile.tap(findTestObject('android/Login/login_Continue with email'), 0)
+not_run: Mobile.tap(findTestObject('android/Login/login_Continue with email'), 0)
 
-Mobile.verifyElementText(findTestObject('android/Login/loginText'), 'Login')
+not_run: Mobile.verifyElementText(findTestObject('android/Login/loginText'), 'Login')
 
-Mobile.verifyElementVisible(findTestObject('android/Login/btnSignUp'), 0, FailureHandling.CONTINUE_ON_FAILURE)
+not_run: Mobile.verifyElementVisible(findTestObject('android/Login/btnSignUp'), 0, FailureHandling.CONTINUE_ON_FAILURE)
 
-Mobile.tap(findTestObject('android/Login/btnSignUp'), 0)
+not_run: Mobile.tap(findTestObject('android/Login/btnSignUp'), 0)
 
-Mobile.verifyElementText(findTestObject('android/Login/signUp/textSignUpAndroid'), 'Sign up', FailureHandling.STOP_ON_FAILURE)
+not_run: Mobile.verifyElementText(findTestObject('android/Login/signUp/textSignUpAndroid'), 'Sign up', FailureHandling.STOP_ON_FAILURE)
 
-Mobile.setText(findTestObject('android/Login/signUp/CheckBox_TermConditionsSignUp'), '', 0)
+not_run: Mobile.setText(findTestObject('android/Login/signUp/CheckBox_TermConditionsSignUp'), '', 0)
 
-Mobile.checkElement(findTestObject('android/Login/signUp/CheckBox_TermConditionsSignUp'), 0)
+not_run: Mobile.checkElement(findTestObject('android/Login/signUp/CheckBox_TermConditionsSignUp'), 0)
 
-Mobile.tap(findTestObject('android/Login/signUp/btn_lanjutkan'), 0)
+not_run: Mobile.tap(findTestObject('android/Login/signUp/btn_lanjutkan'), 0)
 
-Mobile.verifyElementText(findTestObject('android/Login/signUp/onBoard_profilPage/textOnboardingProfil_Lengkapi Profil'), 
+not_run: Mobile.verifyElementText(findTestObject('android/Login/signUp/onBoard_profilPage/textOnboardingProfil_Lengkapi Profil'), 
     'Lengkapi Profil')
 
-Mobile.tap(findTestObject('android/Login/signUp/onBoard_profilPage/btnSkip_signUp'), 0)
+not_run: Mobile.tap(findTestObject('android/Login/signUp/onBoard_profilPage/btnSkip_signUp'), 0)
 
-Mobile.tap(findTestObject('android/Login/signUp/onBoard_profilPage/skipAllertProfil_Ya'), 0)
+not_run: Mobile.tap(findTestObject('android/Login/signUp/onBoard_profilPage/skipAllertProfil_Ya'), 0)
+
+Mobile.tap(findTestObject('android/homePageAndroid/btnProfile1'), 0)
+
+Mobile.verifyElementText(findTestObject('android/profilPage/TextViewAktivitas'), 'Aktivitas')
+
+Mobile.verifyElementText(findTestObject('android/profilPage/TextViewKalender'), 'Kalender')
+
+Mobile.verifyElementText(findTestObject('android/profilPage/TextViewHealth Record'), 'Health Record')
+
+Mobile.verifyElementText(findTestObject('android/profilPage/TextViewKeluarga'), 'Keluarga')
 
