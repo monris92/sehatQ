@@ -56,3 +56,9 @@ Mobile.verifyElementText(findTestObject('android/profilPage/TextViewHealth Recor
 
 Mobile.verifyElementText(findTestObject('android/profilPage/TextViewKeluarga'), 'Keluarga')
 
+Mobile.setText(findTestObject('android/Login/inputEmailLogin'), '', 0)
+
+Mobile.setText(findTestObject('android/Login/inputPasswordLogin'), '', 0)
+
+Mobile.tap(findTestObject('android/Login/btnLanjutkanLogin'), 0)
+

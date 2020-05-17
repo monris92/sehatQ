@@ -24,7 +24,7 @@ Background: user can go to login Page
 
 	Examples:
 		|nameRegister	|emailRegister												|passwordRegister|
-		|ahmad faris	|farisjr558+sehatQ3@gmail.com		|123456	|
+		|ahmad faris	|farisjr558+sehatQQ@gmail.com		|123456	|
 		
 		
 		
